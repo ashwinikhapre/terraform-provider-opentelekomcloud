@@ -31,6 +31,7 @@ var (
 	OS_SERVER_ID              = os.Getenv("OS_SERVER_ID")
 	OS_SERVER_ADDRESS         = os.Getenv("OS_SERVER_ADDRESS")
 	OS_TENANT_ID              = os.Getenv("OS_TENANT_ID")
+	OS_PEER_TENANT_ID         = os.Getenv("OS_PEER_TENANT_ID")
 )
 
 var testAccProviders map[string]terraform.ResourceProvider
