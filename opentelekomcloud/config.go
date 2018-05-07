@@ -365,6 +365,13 @@ func (c *Config) vpcV1Client(region string) (*gophercloud.ServiceClient, error) 
 
 }
 
+func (c *Config) orchestrationV1Client(region string) (*golangsdk.ServiceClient, error) {
+	return huaweisdk.NewOrchestrationV1(c.HwClient, golangsdk.EndpointOpts{
+		Region:       c.determineRegion(region),
+		Availability: c.getHwEndpointType(),
+	})
+}
+
 func (c *Config) dnsV2Client(region string) (*gophercloud.ServiceClient, error) {
 	return openstack.NewDNSV2(c.OsClient, gophercloud.EndpointOpts{
 		Region:       c.determineRegion(region),

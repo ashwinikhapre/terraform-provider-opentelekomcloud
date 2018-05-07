@@ -162,6 +162,7 @@ func Provider() terraform.ResourceProvider {
 			"opentelekomcloud_s3_bucket_object":       dataSourceS3BucketObject(),
 			"opentelekomcloud_rds_flavors_v1":         dataSourceRdsFlavorV1(),
 			"opentelekomcloud_vpc_v1":                 dataSourceVirtualPrivateCloudVpcV1(),
+			"opentelekomcloud_rts_stack_resource_v1":  dataSourceRtsStackResourcesV1(),
 		},
 
 		ResourcesMap: map[string]*schema.Resource{
