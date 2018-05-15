@@ -309,7 +309,11 @@ func NewNetworkV2(client *golangsdk.ProviderClient, eo golangsdk.EndpointOpts) (
 func NewBlockStorageV1(client *golangsdk.ProviderClient, eo golangsdk.EndpointOpts) (*golangsdk.ServiceClient, error) {
 	return initClientOpts(client, eo, "volume")
 }
-
+// NewCCEV1 creates a ServiceClient that may be used with the v1 CCE
+// package.
+func NewCCEV1(client *golangsdk.ProviderClient, eo golangsdk.EndpointOpts) (*golangsdk.ServiceClient, error) {
+	return initClientOpts(client, eo, "cce")
+}
 // NewBlockStorageV2 creates a ServiceClient that may be used to access the v2
 // block storage service.
 func NewBlockStorageV2(client *golangsdk.ProviderClient, eo golangsdk.EndpointOpts) (*golangsdk.ServiceClient, error) {
